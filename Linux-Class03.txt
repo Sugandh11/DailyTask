@@ -1,0 +1,237 @@
+Date:04/03/2026 -Class-->3
+..............................
+Task: 
+1. How to insert a blank line, below the line where the cursor is
+   pointing in vi editor
+
+Ans. Suppose we want to add Blank line in between Calcutta & Delhi i.e., 6th & 7th line,  
+      1 Sugandh
+      2 Calicut
+      3 Cat
+      4 Dog
+      5 Bat
+      6 Calcutta
+      7 Delhi
+      8 Morning
+      9 Good Morning
+     10 Good Evening
+     
+     We simply have to go to anywhere in 6th line and press esc to exit the insert and enter command mode and then press small 'o',
+     In this way 7th blank line got created as below
+     
+      1 Sugandh
+      2 Calicut
+      3 Cat
+      4 Dog
+      5 Bat
+      6 Calcutta
+      7 
+      8 Delhi
+      9 Morning
+     10 Good Morning
+     11 Good Evening
+    
+2. How to seach and replace case insesitive pattern 
+
+Ans. : Suppose we want to replace morning with Sunrise in our file Class1.txt.
+
+sss@ubuntu:~/DevOps/Batch13/Sugandh$ cat class1.txt
+Sugandh
+Calicut
+Cat
+Dog
+Bat
+Calcutta
+GOOD MORNING
+Delhi
+Morning
+Good Morning
+Good Evening
+				
+	Syntax : %s/pattern\c/replacement/g
+	Command : %s/morning\c/Sunrise/g
+	where, :% is search in whole file, s (substitute), g (replace all matches in each line), \c (case-insensitive search)
+	
+      1 Sugandh
+      2 Calicut
+      3 Cat
+      4 Dog
+      5 Bat
+      6 Calcutta
+      7 GOOD Sunrise
+      8 Delhi
+      9 Sunrise
+     10 Good Sunrise
+     11 Good Evening
+	
+3. How to search and replace pattern from 4th line to 10th line
+
+Ans.   1 Sugandh
+      2 Calicut
+      3 Cat
+      4 Dog
+      5 Lion
+      6 Calcutta
+      7 GOOD Sunrise
+      8 Delhi
+      9 Sunrise
+     10 Good Sunrise
+     11 Good Evening
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+~                                                                                                                                             
+:4,10s/Bat/Lion/g
+
+Between lines 4th & 10th, Bat is replaced by Lion
+
+4. Want is the use of man command and what is the difference between man and --help
+
+Ans. 
+..............................
+
+Vi editor (vim- vi modified)
+
+How to create a file in vi editor?
+syntax: vi <file-name>
+
+Note:
+1. If the file already exist then it will open the file
+2. If file dosen't exist, it will create a file and open it
+3. There is no restriction for extension
+
+.....................................
+
+vi editor modes
+
+1. Command mode
+2. Insert mode
+
+By default when you open the file it will be in command mode, to switch frm
+command mode to insert mode we need to use esc i (insert)
+
+How to come out of vi editor and save the the content
+
+esc: wq
+
+w= write
+q = quit
+
+
+how to come out of vi editor without saving the content
+
+esc: q!
+..................................
+
+How to set the line numbers in vi editor?
+
+esc: set nu and then press enter
+
+nu---number
+
+....................
+How to remove the line numbers in vi editor?
+
+esc: set nonu and then press enter
+
+nonu--- no number
+
+...............................
+
+How to move to alast line of a file?
+
+esc G ( esc --shift--g)
+
+....................
+
+How to move to 75th line of a file
+
+esc 75 G
+
+.......................
+
+How to move to 1st line of a file
+
+esc 1 G
+
+....................
+
+How to move to end of the line where the cusrsor is pointing
+
+esc A
+
+......................
+
+How to delete the line where the cursor is pointing
+
+esc dd
+
+......................
+
+How to delete 5 lines from where the cursor is pointing
+
+Synatx: esc n dd
+
+esc 5 dd
+
+ex: suppose if you are in 3rd line (cursor is pointing to 3rd line)
+    and if you execute esc 5 dd then it will delete 5 lines from the 3rd line
+    (3rd line to 7th line)
+    
+................................
+
+How to search and replace 1 st matching string where the cursor is pointing?
+
+esc:s/<serach-pattern>/<return-pattern>
+
+s = search
+
+..............................
+
+How to search and replace all the matching strings where the cursor is pointing?
+
+esc:s/<search pattern>/<return-pattern>/g
+
+...........................
+
+How to search and replace the pattern only on nth line?
+
+es:
+
+How to search and replace the first pattern only on 3rd line
+
+esc:3s/<search-pattern/<return pattern>
+
+How to search and replace all the  pattern only on 3rd line
+
+esc:3s/<search-pattern/<return pattern>/g
+
+Note: Above command will search and replace case sensitive pattern
+
+..................................
+
+
+
+

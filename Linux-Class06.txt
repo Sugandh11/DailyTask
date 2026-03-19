@@ -1,0 +1,121 @@
+Date:07/03/2026-Class->6
+............................
+Task:
+
+1.How to add multiple users together to a group?
+2.How to remove multiple users together from a group ?
+
+.........................
+
+wc command: (word count )
+
+wc command is used to display the no of words,lines,char(bytes) etc..
+
+syntax: wc <file-name>
+
+cat class7.txt 
+good morning
+this is batch 12
+oem@oem-InsydeH2O-EFI-BIOS:~/batch12$ wc class7.txt 
+ 2  6 30 class7.txt
+
+.............................................
+
+wc -l <file-name>
+
+Above command will display the total no of lines.
+................................
+wc -w <file-name>
+
+Above command will display the total no of words.
+................................
+wc -m <file-name>
+
+Above command will display the total no of char.
+................................
+wc -L <file-name>
+
+Above command will display the total no of char's of a longest line in the file.
+................................
+
+Configuration management commands (administrative commands)
+
+It is used to manage users,groups..etc 
+.....................................
+
+How to create a user?
+
+sudo adduser <user-name>
+
+.................
+
+How to check user is created or not?
+
+cat /etc/passwd
+
+.................................
+
+How to change the password of a user?
+
+sudo passwd <user-name>
+
+ex: sudo passwd anish
+
+............................
+
+how to switch to root user
+
+sudo su
+
+.....................................
+
+How to switch to a particular user?
+
+sudo su <user-name>
+
+how to come out?
+exit
+...........................
+How to create a group?
+sudo addgroup <group-name>
+.....................
+how to check a group is created or not?
+cat /etc/group
+............................
+How to add user to a group?
+sudo usermod -G <group-name> <user-name>
+ex: sudo usermod -G devops anish
+how to check
+cat /etc/group
+........................
+how to check which usergroup a user belongs to?
+groups <username>
+ex:groups anish
+.....................................
+How to delete a user?
+sudo deluser <username>
+check? cat /etc/passwd
+.............................
+How to delete a group?
+sudo delgroup <group-name>
+.......................................
+Permissions:
+files/dir's/link
+d= dir
+- = file
+l = link
+1. user permission
+2. group permission
+3. other permissions
+user: who is the owner of file/dir
+group:Provide a particular permission to a group
+other: any user who is neither the owner of the file or member of the group
+.............................
+dir/file/link  <user-perm>  <group-perm> <other-perm>
+d/-/l           r w x        r w x       r w x
+                4 2 1        4 2 1       4 2 1
+............................................................
+777             1 1 1        1 1 1       1 1 1
+457             1 0 0        1 0 1       1 1 1
+034             0 0 0        0 1 1       1 0 0
+.................................

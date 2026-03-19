@@ -1,0 +1,97 @@
+Date:12/03/2026- Class-10 : Memory utilization commands
+.................................
+Task:
+1. What is the diff between http and https
+2. How can you view all processes for a specific user
+3. What is the diff between hostname -I and hostname -i
+.............................
+Memory utilization commands:
+who
+whoami
+free/free -h
+du 
+df
+top
+ps
+...............................
+DU: Disk utilization /Disc usage
+It will display the disc space usage of files and dir's
+syntax:
+du or du -h or du -h <dir-name>
+..........................
+Df: Disc free
+It will show availabe/free disc space on filesytem
+syntax: df  or df -h
+...................
+Top command:
+Top command is used to monitor the sytem resources and process in real time
+or
+It provides real time information (dynamic information) of a running processes in linux system
+or
+It is used to display the real time cpu,memory and process information
+syntax: top
+top | head -15
+Above command will dispaly the first 15 lines of running processes
+...................................
+ps:
+PS command is used to list the current running processes in a linux system
+It provides the running processes at the moment you ran the command
+syntax: ps or ps -aef
+-a = shows all the processes of all users
+-e = Display every process on the system
+-f = Detailed information
+..........................................
+How to kill the process
+Kill <process-id>
+How to kill the process forcefully
+kill -9 <process-id>
+......................................
+Network commands:
+How to check IP address of the system?
+or 
+How to display the system's network interface (ip address, mac adress.. etc)
+ifconfig ot hostname -I (It will show ip address assigned to the host)
+........................
+Ping:
+Ping command is used to check the availability or rechability of the network host or ip address
+ping <address>
+ping google.com
+.........................
+Telnet command
+Telnet command is used to test the connection to a specific server and port.
+or
+It is commonly used to test whether a port on a server is open and reachable.
+Synatx: telnet <hostname/IP> <port>
+Example:
+tentet google.co 80
+This means you are trying to connect google.com on port 80.
+80 → port number (used for HTTP)
+If it connects successfully,it means the server is reachable and port is open.
+oem@oem-InsydeH2O-EFI-BIOS:~/batch13$ telnet google.com 80
+Trying 2404:6800:4007:80f::200e...
+Connected to google.com.
+Escape character is '^]'.
+.................................
+netstat
+netstat is a Linux command used to display network connections, open ports, and the state of those connections on a system.
+When you run netstat, it shows the status (state) of each network connection.
+Important States in netstat
+OPEN
+A port is available and ready for communication.
+LISTEN
+A program is waiting for incoming connections on a port.
+ESTABLISHED
+A connection is active, and two systems are sending and receiving data.
+Command: netstat -a 
+Above command displays all network connections and listening ports on a Linux system.
+...................
+Note:
+
+| Command   | Simple Meaning                           |
+| --------- | ---------------------------------------- |
+| `ping`    | Check if another computer is alive       |
+| `telnet`  | Try to connect to a specific port        |
+| `netstat` | See network connections on your computer |
+
+.....................................
+

@@ -1,0 +1,69 @@
+Date:11/03/2026- Class9
+..........................
+Task
+1. How to display the first and last column of each line on the terminal using AWK
+2. How to display the line number followed by last column content of a file using AWK?
+3. What does awk '{print NR,$0}' <file-name> command will do?
+4. How do you check the contents of a .tar.gz archive file without extracting it?
+   Hint: tar -tzvf rk123.tar.gz
+5. How to compress multiple files
+...........................
+Gzip and gunzip command
+gzip and gunzip command is used to compress and decompress the file respectively
+How to comress (gzip) the file?
+gzip <file-name>
+How to decomress (gunzip) the file?
+gunzip <file-name>
+Note:gzip command works only for files, not dir's
+............................
+Tar: tape-archive
+Tar command is used for creating/manipuilating/archiving files in tar format
+Archiving: Combining multiple files and dir's together
+tar command is used for archiving multiple files and dir's together without any compression,
+which makes easir to manage easier to manage/transfer multiple files as a single unit
+syntax: tar <options> <files/dir's>
+options:
+-c =  create an archive
+-x =extract the archive
+-v = display the information on the terminal (verbose)
+-z = Inform the tar command that files/dir's need to be archived
+-f = To create an archive with given name
+Ex: tar -zcvf rk456.tar.gz <file1.txt> <file2.txt>
+...........................................................
+Awk command
+Awk command is used to extract the dta from the structured file
+or awk command is used to extract the data column wise
+................................
+awk '{print}' file-name
+Above command will display the content on the terminal
+......................................
+awk '{print $4}' file-name
+Above command will display the 4th column content on the terminal
+.......................................
+awk '{print $6}' file-name
+Above command will display the 6th column content on the terminal
+.......................................
+awk '{print $3,$6}' file-name
+Above command will display the 3rd and 6th column content on the terminal
+.......................................
+awk '{print NF, $6}' file-name
+Above command will display the 6th column content on the terminal along with 
+no of fields(columns) in each line
+NF= number of fields
+.......................................
+awk '{print NF, $0}' file-name
+Above command wil print all the content of the file on the terminal along with 
+no of fields(columns) in each line
+.....................
+awk '{print NR,$2}' class9.txt
+ above command will display the 2nd column content on the terminal along with line/row number
+ NR= No of rows / row number
+..................................
+awk 'END{print NR}' file-name
+Above command will display the no of rows(lines) on the terminal
+............................
+awk 'NF>0 {print $3}' file-name
+Above command will display the 3rd column content on the terminal by removing all the empty lines
+..........................................
+
+

@@ -1,0 +1,70 @@
+Date:13/03/2026- class-11 : Network commands & find commands
+.....................................
+Task:
+Difference between wget and curl command
+Note: execute wget and curl with an example
+...............................................
+Networking commands cont......
+ping
+telnet
+netstat
+scp
+rsync
+SCP (secured copy)
+Scp command is used to securely transfer the files between local and remote server
+over the network
+How to copy the files from local machine to remote server
+Syntax:scp <source_file_path> <username>@<server-ip>:<server-path>
+How to copy the files from remote server to local machine?
+Syntax: scp <username>@<remote-ip-address>:<server-path> <local-path>
+...........................
+rsync (remote sysnc)
+Rsync command is used to securely transfer the files between local and remote server
+over the network.
+Rsync command is more efficient compred to scp because rsync command is used for large data transfre or
+incremental backup (it transfers only the new file from source to destination)
+How to copy the files from local machine to remote server
+Syntax:rsync <source_file_path> <username>@<server-ip>:<server-path>
+How to copy the files from remote server to local machine?
+Syntax: rsync <username>@<remote-ip-address>:<server-path> <local-path>
+...................................
+Find command:
+Find command is used to search files/dir's/links in a specified path
+f=file d=dir l=link
+.........................................
+find . -empty
+Above command will display all the empty files/dir's/links in a PWD
+.........................
+find <path> -empty
+Above command will display all the empty files/dir's/links in a specified path
+..................
+find <path> -empty -type f
+Above command will display all the empty files in a path specified in the command
+.....................
+find <path> -empty -type d
+Above command will display all the empty dir's in a path specified in the command
+.....................
+find <path> -empty -type l
+Above command will display all the empty links in a path specified in the command
+.....................
+find .
+Above command will display all the empty and non empty files and dir's and links
+...............
+find . - type f
+Above command will display all the empty and non empty files
+........................
+find <path>  ! -empty
+Above command will display all the non empty files/dir's/links in a specified path
+..................
+find <path> ! -empty -type f
+Above command will display all the non empty files in a path specified in the command
+.....................
+find <path> ! -empty -type d
+Above command will display all the non empty dir's in a path specified in the command
+.....................
+find <path> ! -empty -type l
+Above command will display all the non empty links in a path specified in the command
+.....................
+find . -name "*.txt"
+Above command will find all the contents of the path which is ending with .txt
+....................................
